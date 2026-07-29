@@ -1,0 +1,18 @@
+{
+  "name": "aether-agents",
+  "version": "1.0.0",
+  "description": "Autonomous AI Security Agent Runtime for AetherWallet",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@ethersphere/bee-js": "^9.1.1",
+    "axios": "^1.16.0",
+    "dotenv": "^17.4.2",
+    "openai": "^6.37.0",
+    "viem": "^2.48.11"
+  }
+}

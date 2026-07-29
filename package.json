@@ -1,0 +1,25 @@
+{
+  "name": "aether-wallet",
+  "version": "1.0.0",
+  "description": "Satellite-backed AI Wallet with Enclave Key Custody and Swarm Decentralized Memory Audit Trails",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx tsx wallet/server.ts",
+    "start": "npx tsx wallet/server.ts",
+    "wallet-ui": "npx tsx wallet/server.ts",
+    "wallet-cli": "npx tsx wallet/cli.ts",
+    "agents": "node agents/index.js"
+  },
+  "dependencies": {
+    "axios": "^1.16.0",
+    "dotenv": "^17.4.2",
+    "ethereum-cryptography": "2.2.1",
+    "openai": "^6.37.0",
+    "viem": "^2.48.11"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "@types/node": "^20.17.0"
+  }
+}
