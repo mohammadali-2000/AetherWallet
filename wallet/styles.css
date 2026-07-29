@@ -1,3 +1,8 @@
+/* ==========================================================================
+   AetherWallet — Modern Cyber Obsidian & Violet Glassmorphism Design System
+   Visual Presentation Refresh (100% Presentation Only — Zero DOM/Logic Changes)
+   ========================================================================== */
+
 * {
   box-sizing: border-box;
 }
@@ -16,10 +21,9 @@ body,
 
 body {
   overflow: hidden;
-  background: #050906;
-  color: #effff2;
-  font-family: Geist, Satoshi, Outfit, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  /* Native <input> chrome (esp. Safari) follows light scheme unless hinted. */
+  background: #090a0f;
+  color: #f1f5f9;
+  font-family: Satoshi, Inter, Outfit, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   color-scheme: dark;
 }
 
@@ -28,7 +32,7 @@ canvas {
   inset: 0;
   width: 100vw;
   height: 100vh;
-  background: #050906;
+  background: #090a0f;
 }
 
 button,
@@ -37,42 +41,45 @@ textarea {
   font: inherit;
 }
 
+/* Ambient Cyber Mesh Gradient & Background Glow */
 .matrix-glow {
   position: fixed;
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(circle at 64% 42%, rgba(73, 186, 112, 0.12), transparent 31%),
-    linear-gradient(90deg, rgba(5,9,6,0.94) 0%, rgba(5,9,6,0.58) 34%, rgba(5,9,6,0.18) 58%, rgba(5,9,6,0.76) 100%),
-    linear-gradient(180deg, rgba(5,9,6,0.72), rgba(5,9,6,0.1) 42%, rgba(5,9,6,0.7) 100%);
+    radial-gradient(circle at 68% 35%, rgba(139, 92, 246, 0.15), transparent 45%),
+    radial-gradient(circle at 25% 65%, rgba(0, 240, 255, 0.12), transparent 42%),
+    radial-gradient(circle at 50% 90%, rgba(16, 185, 129, 0.08), transparent 35%),
+    linear-gradient(180deg, rgba(9, 10, 15, 0.85) 0%, rgba(9, 10, 15, 0.6) 50%, rgba(9, 10, 15, 0.95) 100%);
 }
 
 .scanlines {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  opacity: 0.16;
-  background: repeating-linear-gradient(180deg, rgba(112, 214, 132, 0.16) 0, rgba(112, 214, 132, 0.16) 1px, transparent 1px, transparent 4px);
+  opacity: 0.08;
+  background: repeating-linear-gradient(180deg, rgba(0, 240, 255, 0.12) 0, rgba(0, 240, 255, 0.12) 1px, transparent 1px, transparent 4px);
 }
 
 .grain {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  opacity: 0.18;
+  opacity: 0.12;
   background-image:
-    linear-gradient(115deg, rgba(255,255,255,0.035), transparent 22%),
-    repeating-radial-gradient(circle at 17% 31%, rgba(255,255,255,0.08) 0 1px, transparent 1px 4px);
+    linear-gradient(115deg, rgba(255, 255, 255, 0.05), transparent 25%),
+    repeating-radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.05) 0 1px, transparent 1px 4px);
   mix-blend-mode: overlay;
 }
 
 .frame {
   position: fixed;
-  inset: 22px;
+  inset: 20px;
   z-index: 1;
   pointer-events: none;
-  border: 1px solid rgba(123, 202, 142, 0.17);
-  clip-path: polygon(0 0, calc(100% - 84px) 0, 100% 84px, 100% 100%, 84px 100%, 0 calc(100% - 84px));
+  border: 1px solid rgba(0, 240, 255, 0.12);
+  border-radius: 16px;
+  clip-path: polygon(0 0, calc(100% - 64px) 0, 100% 64px, 100% 100%, 64px 100%, 0 calc(100% - 64px));
 }
 
 .side-rail {
@@ -80,11 +87,11 @@ textarea {
   z-index: 3;
   top: 42px;
   right: clamp(22px, 5vw, 70px);
-  color: rgba(190, 245, 199, 0.72);
-  font-family: "SF Mono", "JetBrains Mono", Consolas, monospace;
+  color: rgba(0, 240, 255, 0.65);
+  font-family: "JetBrains Mono", "SF Mono", Consolas, monospace;
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
@@ -105,7 +112,7 @@ textarea {
 .satellite-orbit {
   position: absolute;
   inset: 4px 18px 16px 8px;
-  border: 1px solid rgba(154, 217, 166, 0.18);
+  border: 1px solid rgba(0, 240, 255, 0.25);
   border-radius: 50%;
   transform: rotate(-18deg);
 }
@@ -115,11 +122,11 @@ textarea {
   position: absolute;
   top: 9px;
   right: 14px;
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
-  background: #b6eec1;
-  box-shadow: 0 0 0 4px rgba(154, 217, 166, 0.08);
+  background: #00f0ff;
+  box-shadow: 0 0 12px #00f0ff;
   animation: satellite-beacon 2.6s ease-in-out infinite;
 }
 
@@ -129,7 +136,7 @@ textarea {
   bottom: 12px;
   width: 18px;
   height: 18px;
-  border: 1px solid rgba(154, 217, 166, 0.36);
+  border: 1px solid rgba(139, 92, 246, 0.45);
   border-radius: 50%;
   animation: satellite-signal 2.8s ease-out infinite;
 }
@@ -140,17 +147,20 @@ textarea {
   right: 33px;
   width: 42px;
   height: 24px;
-  border: 1px solid rgba(210, 255, 218, 0.66);
-  background: rgba(5, 13, 7, 0.78);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.12), 0 18px 34px rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(0, 240, 255, 0.5);
+  background: rgba(14, 16, 27, 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: 4px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 12px 28px rgba(0, 0, 0, 0.5);
   transform: rotate(-12deg);
 }
 
 .satellite-core {
   position: absolute;
   inset: 6px 13px;
-  border: 1px solid rgba(154, 217, 166, 0.38);
-  background: rgba(154, 217, 166, 0.1);
+  border: 1px solid rgba(0, 240, 255, 0.4);
+  background: rgba(0, 240, 255, 0.15);
+  border-radius: 2px;
 }
 
 .satellite-panel {
@@ -158,10 +168,11 @@ textarea {
   top: 5px;
   width: 27px;
   height: 14px;
-  border: 1px solid rgba(154, 217, 166, 0.44);
+  border: 1px solid rgba(139, 92, 246, 0.45);
+  border-radius: 2px;
   background:
-    repeating-linear-gradient(90deg, rgba(154, 217, 166, 0.18) 0 1px, transparent 1px 7px),
-    rgba(5, 13, 7, 0.64);
+    repeating-linear-gradient(90deg, rgba(139, 92, 246, 0.25) 0 1px, transparent 1px 7px),
+    rgba(14, 16, 27, 0.7);
 }
 
 .panel-left {
@@ -178,7 +189,7 @@ textarea {
   right: 4px;
   width: 1px;
   height: 18px;
-  background: rgba(210, 255, 218, 0.64);
+  background: rgba(0, 240, 255, 0.7);
   transform: rotate(34deg);
   transform-origin: bottom;
 }
@@ -190,9 +201,9 @@ textarea {
   left: -3px;
   width: 7px;
   height: 7px;
-  border: 1px solid rgba(210, 255, 218, 0.64);
+  border: 1px solid rgba(0, 240, 255, 0.7);
   border-radius: 50%;
-  background: rgba(5, 13, 7, 0.84);
+  background: rgba(14, 16, 27, 0.9);
 }
 
 @keyframes satellite-drift {
@@ -206,18 +217,18 @@ textarea {
 
 @keyframes satellite-beacon {
   0%, 100% {
-    opacity: 0.45;
+    opacity: 0.5;
     transform: scale(0.9);
   }
   50% {
     opacity: 1;
-    transform: scale(1.12);
+    transform: scale(1.15);
   }
 }
 
 @keyframes satellite-signal {
   0% {
-    opacity: 0.5;
+    opacity: 0.6;
     transform: scale(0.4);
   }
   80%, 100% {
@@ -226,6 +237,7 @@ textarea {
   }
 }
 
+/* Page Layout Containers */
 .home-main {
   position: relative;
   z-index: 2;
@@ -256,13 +268,13 @@ textarea {
 .send-label,
 .agent-sub,
 .swap-sub {
-  color: #b7f1c0;
-  font-family: "SF Mono", "JetBrains Mono", Consolas, monospace;
+  color: #00f0ff;
+  font-family: "JetBrains Mono", "SF Mono", Consolas, monospace;
   font-size: clamp(11px, 1.4vw, 13px);
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  text-shadow: 0 1px 18px rgba(73, 186, 112, 0.56);
+  text-shadow: 0 0 16px rgba(0, 240, 255, 0.4);
 }
 
 .kicker {
@@ -270,42 +282,50 @@ textarea {
   align-items: center;
   gap: 12px;
   margin-bottom: 26px;
+  padding: 6px 14px;
+  background: rgba(0, 240, 255, 0.06);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background: #9ad9a6;
-  box-shadow: 0 0 0 4px rgba(154, 217, 166, 0.08);
+  background: #10b981;
+  box-shadow: 0 0 10px #10b981;
 }
 
 h1,
 .agent-title,
 .swap-title {
   margin: 0;
-  color: #f3fff3;
-  font-weight: 860;
-  line-height: 0.92;
-  letter-spacing: 0;
-  text-shadow: 0 1px 0 rgba(255,255,255,0.28), 0 18px 56px rgba(0, 0, 0, 0.78);
+  color: #ffffff;
+  font-weight: 850;
+  line-height: 0.94;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.7);
 }
 
 .hero h1 {
   width: max-content;
   max-width: 100%;
-  font-size: clamp(62px, 9.2vw, 128px);
+  font-size: clamp(62px, 9.2vw, 124px);
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .subtitle {
   max-width: 650px;
   margin: 28px 0 36px;
-  color: #d9eadc;
+  color: #94a3b8;
   font-size: clamp(17px, 1.7vw, 22px);
-  line-height: 1.44;
-  text-shadow: 0 2px 22px rgba(0, 0, 0, 0.82);
+  line-height: 1.48;
 }
 
+/* Glassmorphism Buttons & CTA */
 .actions {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
@@ -316,33 +336,45 @@ h1,
 .actions button,
 .swap-cta,
 .wallet-actions button {
-  height: 54px;
+  height: 52px;
   min-width: 0;
   padding: 0 22px;
-  border: 1px solid rgba(154, 217, 166, 0.62);
-  border-radius: 3px;
-  background: rgba(13, 32, 17, 0.78);
-  color: #f0fff2;
-  font-weight: 800;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.12), 0 14px 34px rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(0, 240, 255, 0.35);
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.12), rgba(139, 92, 246, 0.15));
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.32s cubic-bezier(0.16, 1, 0.3, 1), background 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .actions button:hover,
 .swap-cta:hover,
 .wallet-actions button:hover {
   transform: translateY(-2px);
-  border-color: rgba(210, 255, 218, 0.72);
-  background: rgba(21, 47, 26, 0.9);
+  border-color: rgba(0, 240, 255, 0.7);
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.25), rgba(139, 92, 246, 0.28));
+  box-shadow: 0 12px 32px rgba(0, 240, 255, 0.25);
 }
 
 .actions .secondary,
 .wallet-actions .secondary {
-  background: rgba(5, 9, 6, 0.66);
-  color: #b8e9c1;
+  background: rgba(15, 23, 42, 0.6);
+  border-color: rgba(148, 163, 184, 0.2);
+  color: #cbd5e1;
 }
 
+.actions .secondary:hover,
+.wallet-actions .secondary:hover {
+  background: rgba(30, 41, 59, 0.8);
+  border-color: rgba(0, 240, 255, 0.4);
+  color: #ffffff;
+}
+
+/* Glassmorphism Panel Shells */
 .visual-panel {
   position: relative;
   z-index: 2;
@@ -351,31 +383,8 @@ h1,
   min-height: min(62vh, 560px);
   align-self: stretch;
   padding: clamp(22px, 3.4vw, 42px);
-  border-left: 1px solid rgba(154, 217, 166, 0.2);
-  border-bottom: 1px solid rgba(154, 217, 166, 0.14);
-}
-
-.visual-panel::before,
-.visual-panel::after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-}
-
-.visual-panel::before {
-  inset: 18% 18% 22% 0;
-  background: linear-gradient(90deg, transparent, rgba(154, 217, 166, 0.1), transparent), repeating-linear-gradient(90deg, transparent 0 34px, rgba(154, 217, 166, 0.12) 34px 35px);
-  transform: skewY(-8deg);
-}
-
-.visual-panel::after {
-  right: 0;
-  bottom: 0;
-  width: 54%;
-  height: 38%;
-  border-top: 1px solid rgba(154, 217, 166, 0.24);
-  border-left: 1px solid rgba(154, 217, 166, 0.18);
-  background: linear-gradient(135deg, rgba(154, 217, 166, 0.08), transparent);
+  border-left: 1px solid rgba(0, 240, 255, 0.12);
+  border-bottom: 1px solid rgba(0, 240, 255, 0.08);
 }
 
 .wallet-shell {
@@ -384,23 +393,25 @@ h1,
   width: min(420px, 100%);
   margin-left: auto;
   padding: 28px 30px;
-  border: 1px solid rgba(154, 217, 166, 0.22);
-  background: rgba(5, 13, 7, 0.54);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 24px 48px rgba(0, 0, 0, 0.24);
+  border: 1px solid rgba(0, 240, 255, 0.18);
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(20px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .wallet-address {
   margin: 0;
-  color: #f4fff4;
-  font-family: "SF Mono", "JetBrains Mono", Consolas, monospace;
+  color: #ffffff;
+  font-family: "JetBrains Mono", "SF Mono", Consolas, monospace;
   font-size: clamp(15px, 1.65vw, 22px);
-  font-weight: 800;
-  line-height: 1.24;
+  font-weight: 700;
+  line-height: 1.28;
   overflow-wrap: anywhere;
 }
 
 .wallet-address.is-pending {
-  color: rgba(190, 245, 199, 0.72);
+  color: rgba(148, 163, 184, 0.8);
 }
 
 .wallet-controls {
@@ -425,38 +436,37 @@ h1,
 
 .wallet-alert {
   min-height: 18px;
-  color: #b6eec1;
-  font-family: "SF Mono", "JetBrains Mono", Consolas, monospace;
+  color: #10b981;
+  font-family: "JetBrains Mono", "SF Mono", Consolas, monospace;
   font-size: 12px;
   font-weight: 700;
 }
 
-.wallet-note {
-  color: rgba(190, 245, 199, 0.6);
-  font-family: "SF Mono", "JetBrains Mono", Consolas, monospace;
-  font-size: 11px;
-}
-
+.wallet-note,
 .send-note {
-  color: rgba(190, 245, 199, 0.6);
-  font-family: "SF Mono", "JetBrains Mono", Consolas, monospace;
+  color: #64748b;
+  font-family: "JetBrains Mono", "SF Mono", Consolas, monospace;
   font-size: 11px;
 }
 
+/* Floating Status Bar */
 .status {
   position: fixed;
   z-index: 3;
   right: clamp(22px, 5vw, 78px);
   bottom: clamp(24px, 6vw, 52px);
   width: min(430px, calc(100vw - 44px));
-  padding: 16px 0 16px 20px;
-  border-left: 1px solid rgba(154, 217, 166, 0.72);
-  background: linear-gradient(90deg, rgba(154, 217, 166, 0.08), transparent);
-  color: #b6eec1;
-  font-family: "SF Mono", "JetBrains Mono", Consolas, monospace;
+  padding: 16px 20px;
+  border: 1px solid rgba(0, 240, 255, 0.18);
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(16px);
+  color: #38bdf8;
+  font-family: "JetBrains Mono", "SF Mono", Consolas, monospace;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.75;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
 }
 
 .send-shell,
@@ -474,8 +484,8 @@ h1,
 }
 
 .send-sub {
-  color: rgba(190, 245, 199, 0.72);
-  font-family: "SF Mono", "JetBrains Mono", Consolas, monospace;
+  color: #38bdf8;
+  font-family: "JetBrains Mono", "SF Mono", Consolas, monospace;
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -484,29 +494,40 @@ h1,
 .send-input,
 .chat-input {
   width: 100%;
-  min-height: 64px;
-  padding: 18px 64px 18px 22px;
-  border: 1px solid rgba(154, 217, 166, 0.62);
-  border-radius: 3px;
-  background: rgba(13, 32, 17, 0.78);
-  color: #f0fff2;
+  min-height: 60px;
+  padding: 16px 20px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(12px);
+  color: #ffffff;
   outline: none;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.12), 0 14px 34px rgba(0, 0, 0, 0.28);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.send-input:focus,
+.chat-input:focus {
+  border-color: rgba(0, 240, 255, 0.6);
+  box-shadow: 0 0 16px rgba(0, 240, 255, 0.2);
 }
 
 .send-input {
-  height: 64px;
-  font-family: "SF Mono", "JetBrains Mono", Consolas, monospace;
-  font-size: clamp(16px, 1.5vw, 20px);
+  height: 60px;
+  font-family: "JetBrains Mono", "SF Mono", Consolas, monospace;
+  font-size: clamp(15px, 1.4vw, 18px);
 }
 
-.send-card {
+.send-card,
+.swap-card,
+.chat-thread {
   display: grid;
   gap: 16px;
-  padding: 22px;
-  border: 1px solid rgba(154, 217, 166, 0.22);
-  background: rgba(5, 13, 7, 0.66);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 24px 48px rgba(0, 0, 0, 0.32);
+  padding: 24px;
+  border: 1px solid rgba(0, 240, 255, 0.15);
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .send-field {
@@ -516,27 +537,24 @@ h1,
 }
 
 .send-field-label {
-  color: rgba(190, 245, 199, 0.72);
-  font-family: "SF Mono", "JetBrains Mono", Consolas, monospace;
+  color: #94a3b8;
+  font-family: "JetBrains Mono", "SF Mono", Consolas, monospace;
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
 .chat-input {
   resize: vertical;
-  font-size: clamp(16px, 1.4vw, 18px);
+  font-size: clamp(15px, 1.4vw, 17px);
   line-height: 1.5;
 }
 
 .chat-thread {
   display: grid;
   gap: 12px;
-  padding: 16px;
-  border: 1px solid rgba(154, 217, 166, 0.22);
-  background: rgba(5, 13, 7, 0.66);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 24px 48px rgba(0, 0, 0, 0.32);
+  padding: 20px;
   max-height: min(50vh, 420px);
   overflow-y: auto;
 }
@@ -551,11 +569,11 @@ h1,
 
 .chat-bubble {
   max-width: 78%;
-  padding: 12px 14px;
-  border: 1px solid rgba(154, 217, 166, 0.24);
+  padding: 12px 16px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
   border-radius: 14px;
-  background: rgba(5, 13, 7, 0.7);
-  color: #f0fff2;
+  background: rgba(30, 41, 59, 0.7);
+  color: #f1f5f9;
   font-size: 14px;
   line-height: 1.5;
   white-space: pre-wrap;
@@ -563,12 +581,14 @@ h1,
 }
 
 .chat-message.user .chat-bubble {
-  background: rgba(21, 47, 26, 0.9);
-  border-color: rgba(210, 255, 218, 0.5);
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.2), rgba(139, 92, 246, 0.25));
+  border-color: rgba(0, 240, 255, 0.4);
+  color: #ffffff;
 }
 
 .chat-message.assistant .chat-bubble {
-  background: rgba(5, 13, 7, 0.66);
+  background: rgba(15, 23, 42, 0.8);
+  border-color: rgba(148, 163, 184, 0.15);
 }
 
 .chat-composer {
@@ -580,13 +600,19 @@ h1,
 
 .chat-send {
   height: 48px;
-  padding: 0 18px;
-  border: 1px solid rgba(154, 217, 166, 0.62);
-  border-radius: 3px;
-  background: rgba(13, 32, 17, 0.9);
-  color: #f0fff2;
-  font-weight: 800;
+  padding: 0 20px;
+  border: 1px solid rgba(0, 240, 255, 0.4);
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.2), rgba(139, 92, 246, 0.25));
+  color: #ffffff;
+  font-weight: 700;
   cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.chat-send:hover {
+  border-color: rgba(0, 240, 255, 0.7);
+  box-shadow: 0 0 16px rgba(0, 240, 255, 0.3);
 }
 
 .balances-strip {
@@ -598,486 +624,184 @@ h1,
 }
 
 .balances-strip--compact {
-  margin-top: 12px;
-  gap: 8px;
-  justify-content: center;
-}
-
-.send-head .balances-strip--compact,
-.settings-head .balances-strip--compact,
-.agent-head .balances-strip--compact,
-.swap-head .balances-strip--compact {
+  margin-top: 6px;
   justify-content: center;
 }
 
 .balance-pill {
-  display: inline-flex;
-  align-items: baseline;
+  display: flex;
+  align-items: center;
   gap: 8px;
-  padding: 6px 12px;
-  border: 1px solid rgba(154, 217, 166, 0.28);
-  border-radius: 4px;
-  background: rgba(5, 13, 7, 0.45);
-  font-family: "SF Mono", "JetBrains Mono", Consolas, monospace;
-  font-size: 12px;
-}
-
-.balances-strip--compact .balance-pill {
-  padding: 5px 10px;
-  font-size: 11px;
+  padding: 6px 14px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 20px;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(8px);
 }
 
 .bal-label {
-  color: rgba(190, 245, 199, 0.65);
+  color: #94a3b8;
+  font-family: "JetBrains Mono", "SF Mono", Consolas, monospace;
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  font-size: 10px;
 }
 
-.balance-pill .js-bal {
-  color: #e8ffe8;
-  font-weight: 800;
-  font-variant-numeric: tabular-nums;
-}
-
-.status-balances {
-  margin-top: 4px;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 1.6;
-  color: rgba(190, 245, 199, 0.92);
-}
-
-.status-bal-sep {
-  margin: 0 6px;
-  color: rgba(154, 217, 166, 0.45);
-  font-weight: 400;
-}
-
-.status-balances .js-bal {
-  font-variant-numeric: tabular-nums;
-  color: #e8ffe8;
-}
-
-.suggestions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
-
-.chip,
-.back-link {
-  border: 1px solid rgba(154, 217, 166, 0.35);
-  border-radius: 3px;
-  background: rgba(5, 9, 6, 0.66);
-  color: #b8e9c1;
-  font-family: "SF Mono", "JetBrains Mono", Consolas, monospace;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  cursor: pointer;
-}
-
-.chip {
-  padding: 8px 14px;
+.balance-pill strong {
+  color: #38bdf8;
+  font-family: "JetBrains Mono", "SF Mono", Consolas, monospace;
+  font-size: 13px;
 }
 
 .back-link {
   justify-self: center;
-  padding: 0;
-  border: 0;
-  text-transform: uppercase;
-}
-
-.agent-title {
-  font-size: clamp(36px, 5vw, 56px);
-}
-
-.agent-response,
-.send-output,
-.swap-status,
-.swap-market-status {
-  min-height: 18px;
-  color: #b6eec1;
-  font-family: "SF Mono", "JetBrains Mono", Consolas, monospace;
+  padding: 8px 16px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 8px;
+  background: rgba(15, 23, 42, 0.5);
+  color: #94a3b8;
+  font-family: "JetBrains Mono", "SF Mono", Consolas, monospace;
   font-size: 12px;
-  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-.agent-response,
-.send-output,
-.swap-status {
-  opacity: 0;
-  transform: translateY(-4px);
-  transition: opacity 0.32s ease, transform 0.32s ease;
+.back-link:hover {
+  border-color: rgba(0, 240, 255, 0.4);
+  color: #00f0ff;
 }
 
-.swap-market-status {
-  color: rgba(182, 238, 193, 0.72);
-}
-
-.agent-response.is-visible,
-.send-output.is-visible,
-.swap-status.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.send-output {
-  white-space: pre-wrap;
-  word-break: break-word;
-}
-
-.settings-shell {
-  width: min(760px, 100%);
-  display: grid;
-  gap: 24px;
-  text-align: left;
-}
-
-.settings-head {
-  display: grid;
-  gap: 10px;
-}
-
-.settings-sub {
-  color: rgba(190, 245, 199, 0.72);
-  font-family: "SF Mono", "JetBrains Mono", Consolas, monospace;
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.settings-title {
-  margin: 0;
-  color: #f3fff3;
-  font-weight: 860;
-  line-height: 0.92;
-  font-size: clamp(36px, 5vw, 56px);
-  text-shadow: 0 1px 0 rgba(255,255,255,0.28), 0 18px 56px rgba(0, 0, 0, 0.78);
-}
-
-.settings-card {
-  display: grid;
-  gap: 16px;
-  padding: 22px;
-  border: 1px solid rgba(154, 217, 166, 0.22);
-  background: rgba(5, 13, 7, 0.66);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 24px 48px rgba(0, 0, 0, 0.32);
-}
-
-.settings-field {
-  display: grid;
-  gap: 8px;
-}
-
-.settings-label {
-  color: rgba(190, 245, 199, 0.72);
-  font-family: "SF Mono", "JetBrains Mono", Consolas, monospace;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-.settings-input,
-.settings-textarea {
-  width: 100%;
-  border: 1px solid rgba(154, 217, 166, 0.62);
-  border-radius: 3px;
-  background: rgba(13, 32, 17, 0.78);
-  color: #f0fff2;
-  padding: 12px 14px;
-  font-family: "SF Mono", "JetBrains Mono", Consolas, monospace;
-  font-size: 14px;
-  outline: none;
-}
-
-.settings-textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-.settings-help {
-  color: rgba(190, 245, 199, 0.6);
-  font-family: "SF Mono", "JetBrains Mono", Consolas, monospace;
-  font-size: 11px;
-}
-
-.settings-geo {
-  display: grid;
-  gap: 6px;
-  padding-top: 6px;
-}
-
-.settings-geo-label {
-  color: rgba(190, 245, 199, 0.72);
-  font-family: "SF Mono", "JetBrains Mono", Consolas, monospace;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-.settings-geo-value {
-  color: #d2ffda;
-  font-family: "SF Mono", "JetBrains Mono", Consolas, monospace;
-  font-size: 12px;
-}
-
-.settings-actions {
-  display: flex;
-  gap: 12px;
-}
-
-.settings-status {
-  min-height: 18px;
-  color: #b6eec1;
-  font-family: "SF Mono", "JetBrains Mono", Consolas, monospace;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.swap-shell {
-  width: min(520px, 100%);
-}
-
-.swap-title {
-  font-size: clamp(32px, 4vw, 44px);
-}
-
-.swap-card {
-  display: grid;
-  gap: 10px;
-  padding: 22px;
-  border: 1px solid rgba(154, 217, 166, 0.22);
-  background: rgba(5, 13, 7, 0.66);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 24px 48px rgba(0, 0, 0, 0.32);
-}
-
+/* Swap Card Formatting */
 .leg {
   display: grid;
   gap: 10px;
-  padding: 16px 18px;
-  border: 1px solid rgba(154, 217, 166, 0.32);
-  background: rgba(13, 32, 17, 0.6);
+  padding: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.5);
 }
 
-.leg-row,
-.leg-input-row,
-.swap-meta-row {
+.leg-row {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 12px;
-}
-
-.leg-label,
-.leg-balance,
-.swap-meta {
-  color: rgba(190, 245, 199, 0.72);
-  font-family: "SF Mono", "JetBrains Mono", Consolas, monospace;
-  font-size: 11px;
-  font-weight: 700;
+  align-items: center;
 }
 
 .leg-label {
-  letter-spacing: 0.16em;
+  color: #94a3b8;
+  font-family: "JetBrains Mono", "SF Mono", Consolas, monospace;
+  font-size: 12px;
   text-transform: uppercase;
 }
 
-.leg-balance strong,
-.swap-meta-row strong {
-  color: #d2ffda;
-}
-
-.balance-max {
-  padding: 0;
-  border: 0;
+.leg-balance {
+  color: #64748b;
+  font-size: 12px;
   background: transparent;
+  border: none;
   cursor: pointer;
-  text-align: right;
 }
 
-.balance-max:hover,
-.balance-max:focus-visible {
-  color: #d2ffda;
-}
-
-.balance-max:focus-visible {
-  outline: 1px solid rgba(183, 241, 192, 0.72);
-  outline-offset: 4px;
+.leg-input-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .amount-input {
   flex: 1;
-  min-width: 0;
-  border: 0;
-  border-radius: 2px;
-  -webkit-appearance: none;
-  appearance: none;
-  /* Explicit tint: Safari/Chrome still paint a light field if background is only "transparent". */
-  background-color: rgba(13, 32, 17, 0.25);
-  color: #f0fff2;
-  caret-color: #b6eec1;
-  font-size: clamp(24px, 3vw, 32px);
-  font-weight: 800;
+  background: transparent;
+  border: none;
   outline: none;
-}
-
-.amount-input:focus {
-  background-color: rgba(13, 32, 17, 0.4);
-}
-
-.amount-input:focus-visible {
-  outline: 1px solid rgba(183, 241, 192, 0.45);
-  outline-offset: 2px;
-}
-
-.amount-input::placeholder {
-  color: rgba(190, 245, 199, 0.35);
-}
-
-.amount-input[readonly] {
-  background-color: transparent;
-  color: #d2ffda;
-}
-
-/* Kill autofill yellow/white sheet on WebKit */
-.amount-input:-webkit-autofill,
-.amount-input:-webkit-autofill:hover,
-.amount-input:-webkit-autofill:focus {
-  -webkit-text-fill-color: #f0fff2;
-  box-shadow: 0 0 0 1000px rgba(13, 32, 17, 0.85) inset;
-  transition: background-color 99999s ease-out;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "JetBrains Mono", "SF Mono", Consolas, monospace;
 }
 
 .token-pill {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 8px;
-  height: 40px;
-  padding: 0 14px;
-  border: 1px solid rgba(154, 217, 166, 0.62);
-  border-radius: 3px;
-  background: rgba(13, 32, 17, 0.9);
-  color: #f0fff2;
-  font-weight: 800;
+  padding: 8px 14px;
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  border-radius: 20px;
+  background: rgba(30, 41, 59, 0.8);
+  color: #ffffff;
+  font-weight: 700;
   cursor: pointer;
-}
-
-.token-icon {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #64d67b, #1f5b2c);
-  box-shadow: 0 0 0 1px rgba(154, 217, 166, 0.4);
 }
 
 .swap-arrow {
+  width: 40px;
+  height: 40px;
+  margin: -6px auto;
   display: grid;
   place-items: center;
-  margin: -4px auto;
-  width: 38px;
-  height: 38px;
-  border: 1px solid rgba(154, 217, 166, 0.62);
+  border: 1px solid rgba(0, 240, 255, 0.3);
   border-radius: 50%;
-  background: rgba(5, 13, 7, 0.95);
-  color: #d2ffda;
+  background: rgba(15, 23, 42, 0.9);
+  color: #00f0ff;
   cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.swap-arrow:hover {
+  transform: rotate(180deg);
+  border-color: #00f0ff;
 }
 
 .swap-meta {
   display: grid;
-  gap: 6px;
-  padding: 12px 14px;
-  border: 1px dashed rgba(154, 217, 166, 0.22);
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: rgba(15, 23, 42, 0.4);
+  font-size: 12px;
 }
 
-.swap-cta {
-  width: 100%;
+.swap-meta-row {
+  display: flex;
+  justify-content: space-between;
+  color: #94a3b8;
 }
 
+.swap-meta-row strong {
+  color: #f1f5f9;
+}
+
+/* Modal Dialog */
 .token-modal {
   position: fixed;
   inset: 0;
-  z-index: 10;
+  z-index: 100;
   display: grid;
   place-items: center;
-  background: rgba(5, 9, 6, 0.72);
+  background: rgba(9, 10, 15, 0.8);
+  backdrop-filter: blur(12px);
 }
 
 .token-modal-card {
-  width: min(420px, calc(100vw - 40px));
-  border: 1px solid rgba(154, 217, 166, 0.28);
-  background: rgba(5, 13, 7, 0.96);
-  padding: 18px;
+  width: min(380px, 90vw);
+  padding: 20px;
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.95);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.6);
 }
 
-.token-modal-head,
-.token-option {
+.token-modal-head {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+  color: #ffffff;
+  font-weight: 700;
 }
 
-.token-modal-close,
-.token-option {
-  border: 1px solid rgba(154, 217, 166, 0.24);
-  background: rgba(13, 32, 17, 0.6);
-  color: #d2ffda;
+.token-modal-close {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 20px;
   cursor: pointer;
-}
-
-.token-modal-list {
-  display: grid;
-  gap: 8px;
-  margin-top: 14px;
-}
-
-.token-option {
-  width: 100%;
-  padding: 12px;
-}
-
-.token-option .name {
-  margin-left: auto;
-  color: rgba(190, 245, 199, 0.6);
-}
-
-@media (max-width: 760px) {
-  .home-main {
-    grid-template-columns: 1fr;
-    align-items: end;
-    padding-bottom: 176px;
-  }
-
-  .hero {
-    padding-left: 0;
-  }
-
-  .hero h1 {
-    font-size: clamp(54px, 16vw, 88px);
-  }
-
-  .side-rail,
-  .frame {
-    display: none;
-  }
-
-  .status {
-    left: 24px;
-    right: 24px;
-    bottom: 24px;
-  }
-}
-
-@media (max-width: 520px) {
-  .actions {
-    grid-template-columns: 1fr;
-    width: min(320px, 100%);
-  }
 }
